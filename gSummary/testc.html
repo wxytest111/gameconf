@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Happy Elements</title>
+</head>
+<body>
+    <div id="he_canvas"></div>
+        <script type="text/javascript">
+
+    var Gip_JS_Config = {
+        snsSessionKey:'0vfOG2j2xrJ1WU0YHIjgU9yflMLnEUypNWCHlmAKA4Y.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzMzEwMjQ0MDAsImlzc3VlZF9hdCI6MTMzMTAxODYyMSwib2F1dGhfdG9rZW4iOiJBQUFDSzFLS1pCc3hrQkFKblhmRllmRWtKVWtTaENiMGw3UXlYZnNaQk40R3JWNWJCd0tiWVFvbnpCSXFVYXpUb08wSU5UVENGSGdaQmplalZjam1YTnJOSm03aWVjc3hqdmVOZFpBc2Jyc0JBRkd5WkNyNm1uIiwidXNlciI6eyJjb3VudHJ5IjoiY24iLCJsb2NhbGUiOiJ6aF9DTiIsImFnZSI6eyJtaW4iOjIxfX0sInVzZXJfaWQiOiIxMDAwMDMxNDM1NTQwNzkifQ',
+        sk:'100003143554079',
+        skText:'facebook_viewer_id',
+        snsAppId:'152645868106521',
+        snsAppName:'我的王國',
+        snsAppKey:'efb4614cc6830b0570b0e981e16021f9',
+        gipAppId:'8000100301',
+        platform:'Facebook',
+        webServer:'http://gip.happyelements.com',
+        staticServer:'http://static.gip.happyelements.com',
+        dataCountUrl:'http://log.dc.happyelements.net/restapi.php',
+        dcUUID:'titan_fb_prod',
+        canvasHeight: 1450,
+        dcLanguage:'zh_TW',
+        appUrl:'http://apps.facebook.com/mykingdomhe/',
+        appPhoto:'http%3A%2F%2Fstatic.gip.happyelements.com%2Fcss%2Ffacebook%2F0.0.6%2Fimages%2Fpre_75.jpg',
+        paymentUrl:'http://payment.happyelements.com/loader/facebook_config.jsp',
+        paymentDisabled: false,
+        appDescription:'%20%E3%80%8AMy%20Kingdom%E3%80%8B%E6%98%AF%E4%B8%80%E6%AC%BE%E4%BB%A5%E4%B8%AD%E4%B8%96%E7%B4%80%E7%82%BA%E6%99%82%E4%BB%A3%E8%83%8C%E6%99%AF%EF%BC%8C%E4%BB%A5%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%A8%AD%E7%B6%93%E7%87%9F%E5%92%8C%E6%8E%A2%E9%9A%AA%E7%82%BA%E4%B8%BB%E9%A1%8C%E7%9A%84%E7%A4%BE%E4%BA%A4%E9%81%8A%E6%88%B2%E3%80%82%E7%8E%A9%E5%AE%B6%E5%9C%A8%E9%81%8A%E6%88%B2%E4%B8%AD%E6%89%AE%E6%BC%94%E4%B8%80%E4%BD%8D%E4%B8%AD%E4%B8%96%E7%B4%80%E5%9C%8B%E7%8E%8B%EF%BC%8C%E5%B8%B6%E9%A0%98%E8%87%A3%E6%B0%91%E9%80%B2%E8%A1%8C%E7%94%9F%E7%94%A2%E5%8B%9E%E5%8B%95%E3%80%81%E5%BB%BA%E9%80%A0%E5%9F%8E%E5%A0%A1%E3%80%81%E9%96%8B%E6%8B%93%E7%96%86%E5%9C%9F%EF%BC%8C%E4%B8%8D%E6%96%B7%E7%99%BC%E5%B1%95%E5%A3%AF%E5%A4%A7%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8E%8B%E5%9C%8B%E3%80%82%E5%9C%A8%E9%AB%94%E9%A9%97%E7%8E%8B%E5%9C%8B%E7%99%BC%E5%B1%95%E5%92%8C%E6%96%87%E6%98%8E%E9%80%B2%E6%AD%A5%E7%9A%84%E6%88%90%E5%B0%B1%E6%84%9F%E7%9A%84%E5%90%8C%E6%99%82%EF%BC%8C%E7%8E%A9%E5%AE%B6%E9%82%84%E5%8F%AF%E4%BB%A5%E8%88%87%E5%A5%BD%E5%8F%8B%E5%85%85%E5%88%86%E4%BA%92%E5%8A%A8%EF%BC%8C%E4%BA%92%E7%9B%B8%E5%B9%AB%E5%8A%A9%EF%BC%8C%E4%B8%A6%E8%82%A9%E7%99%BC%E5%B1%95%EF%BC%8C%E4%BA%AB%E5%8F%97%E4%BA%BA%E9%9A%9B%E4%BA%A4%E5%BE%80%E7%9A%84%E6%A8%82%E8%B6%A3%E3%80%82%E9%81%8A%E6%88%B2%E5%A0%B4%E6%99%AF%E5%AE%8F%E5%A4%A7%EF%BC%8C%E7%95%AB%E9%9D%A2%E7%B2%BE%E7%B7%BB%EF%BC%8C%E8%89%B2%E5%BD%A9%E8%B1%90%E5%AF%8C%EF%BC%8C%E9%81%A9%E5%90%88%E4%B8%8D%E5%90%8C%E4%BA%BA%E7%BE%A4%E3%80%82%E6%88%91%E7%9A%84%E7%8E%8B%E5%9C%8B%E6%88%91%E5%81%9A%E4%B8%BB%EF%BC%81%E6%89%93%E9%80%A0%E5%B1%AC%E6%96%BC%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%8C%E7%BE%8E%E7%8E%8B%E5%9C%8B%EF%BC%81%20%20',
+        csServerUrl:'http://ask.happyelements.com/',
+        flashHeight:'700',
+        countAPI:false,
+        limited:false,
+        startCount:new Date().getTime(),
+        flashVersion : '20120217',
+        oldContainer : '/gipcontainer_30.swf',
+        newContainer : '/gipcontainer_9.60845.swf',
+        popupInterval:0,
+
+                snsExtendInfo:{"type":"homepage_method","method":"facebookIndex","gip_app_id":"8000100301","signed_request":"0vfOG2j2xrJ1WU0YHIjgU9yflMLnEUypNWCHlmAKA4Y.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzMzEwMjQ0MDAsImlzc3VlZF9hdCI6MTMzMTAxODYyMSwib2F1dGhfdG9rZW4iOiJBQUFDSzFLS1pCc3hrQkFKblhmRllmRWtKVWtTaENiMGw3UXlYZnNaQk40R3JWNWJCd0tiWVFvbnpCSXFVYXpUb08wSU5UVENGSGdaQmplalZjam1YTnJOSm03aWVjc3hqdmVOZFpBc2Jyc0JBRkd5WkNyNm1uIiwidXNlciI6eyJjb3VudHJ5IjoiY24iLCJsb2NhbGUiOiJ6aF9DTiIsImFnZSI6eyJtaW4iOjIxfX0sInVzZXJfaWQiOiIxMDAwMDMxNDM1NTQwNzkifQ","countAPI":false},
+                                debug:true
+};
+Gip_JS_Config.pageConfigureData = {"ad":{"type":"image","data":[{"name":"","url":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/3c26aae82b0535a517e29254aa43d736.jpg","link":"","target":"_blank"}]},"tips":["情人節活動開始啦，快來收集玫瑰花吧~"],"tabs":[{"tab":{"id":"fm_tab_app","type":"main","text":"play","width":"126","bgImageUrl":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/994997ac134be2cab09311ca66584443.png","class":"app","display":"block","relid":"fm_panel_app"},"panel":{"height":"","url":""},"event":{"click":"","show":"","hide":""}},{"tab":{"id":"fm_tab_invite","type":"func","text":"invite","width":"126","bgImageUrl":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/cfb5b8a37639fd08a9a74dc8315fc26e.png","class":"invite","display":"","relid":"fm_panel_invite"},"panel":{"height":"","url":""},"event":{"click":"fmInviteCommon","show":"","hide":""}},{"tab":{"id":"fm_tab_payment","type":"func","text":"payment","width":"106","bgImageUrl":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/5f08a3d7ac774aac7e03c8279bc00588.png","class":"charge","display":"","relid":"fm_panel_payment"},"panel":{"height":"950","url":""},"event":{"click":"fmShowPayment","show":"","hide":""}},{"tab":{"id":"","type":"link","text":"讨论区","width":"106","bgImageUrl":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/c306a36fcf83add0a7e226c29d0c182e.png","class":"","display":"","relid":""},"panel":{"height":"800","url":"http:\/\/bbs.happyelements.com\/tc\/forumdisplay.php?fid=35&gameid=1"},"event":{"click":"","show":"","hide":""}},{"tab":{"id":"fm_tab_service","type":"func","text":"service","width":"106","bgImageUrl":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/7598af7b2978b9600d1b90363ab480bf.png","class":"service","display":"","relid":"fm_panel_service"},"panel":{"height":"800","url":""},"event":{"click":"fmShowService","show":"","hide":""}},{"tab":{"id":"","type":"link","text":"tab_8","width":"106","bgImageUrl":"http:\/\/static.gipportal.happyelements.com\/portal\/framework\/8000100301\/4b4d6776fbb2eed25287c05560cdbeed.png","class":"","display":"","relid":""},"panel":{"height":"800","url":"http:\/\/www.facebook.com\/mykingdomhe"},"event":{"click":"","show":"","hide":""}}],"texts":{"locale":"語言切換","userId":"遊戲ID"},"help":[{"text":"粉絲頁","link":"http:\/\/www.facebook.com\/mykingdomhe","target":"_blank"},{"text":"隱私政策","link":"http:\/\/static.gip.happyelements.com\/html\/privacy\/privacy.html","target":"_blank"},{"text":"服務條款","link":"http:\/\/static.gip.happyelements.com\/html\/privacy\/tos.html","target":"_blank"},{"text":"開發&發行：Happy Elements","link":"http:\/\/www.happyelements.com\/","target":"_blank"}],"enableMessageCenter":true,"newPayment":1,"pb":{"logo":"http:\/\/static.gipportal.happyelements.com\/app\/titian\/logo.png"},"maintanceHTML":"<p style='padding-top:150px;font-size:18px;'>尊敬的各位國王：<br \/>由於伺服器錯誤，您暫時不能登入遊戲，由此給您帶來的不便，我們深感抱歉！不過我們的工程師正在緊急搶修伺服器，感謝您的耐心等待，這期間您也可以嘗試一下體驗一下“<a style='text-decoraton:underline;color:#3B5998;font-weight:bold;' href='http:\/\/apps.facebook.com\/happyfishbowl\/?src=maintance_titan' target='_top'>開心水族箱<\/a>”這款遊戲哦！<\/p>","enableCrossPromotion":true,"likeConfig":{"id":"268908549831344","url":"http:\/\/www.facebook.com\/mykingdomhe"}};
+
+Gip_JS_Config.translation  = {"locale":"","serviceUrl":"","iTeamIds":"","resources":""};
+
+Gip_JS_Config.path = {
+    css : {
+        fm : '/fm/fm_0_2.32107.css',
+        sns : '/platform/facebook/sns_1_0.36128.css',
+        appDefault : '',
+        appPlatform:''
+    },
+    js : {
+        lib : '/common/lib_0_2.49400.js',
+        fm: '/fm/fm_0_3.62725.js',
+        sns : '/platform/facebook/sns_1_0.61837.js',
+        appDefault : '',
+		appPlatform:''	
+    }
+};
+
+
+Gip_JS_Config.component = {
+    user_pop_for_mall: {
+         js : "/component/user_pop_for_mall/user_pop.59044.js",
+         css: "/component/user_pop_for_mall/user_pop.58528.css"
+    }, 
+    pop : {
+         js : "/component/pop/pop.32431.js",
+         css: "/component/pop/pop.32482.css"
+    }, 
+    fri : {
+         js : "/component/friends/friends.45303.js",
+         css: "/component/friends/friends.45302.css"
+    },
+    "messageCenter" : {
+         js : "/component/message_center/script.59455.js",
+         css: "/component/message_center/style.40845.css"
+    },
+    "prom" : {
+         js : "/component/prom/prom.54629.js",
+         css: "/component/prom/prom.42053.css"
+    },
+    "invite":{
+	"js":"/component/invite/invite.56908.js",
+	"css":"/component/invite/invite.56911.css"
+    },
+    "present":{
+         "js":"/component/present/present.39090.js",
+         "css":"/component/present/present.30585.css"
+    }, 
+    "mallEntry":{
+         "js":"/component/mallEntry/mallEntry.55492.js",
+         "css":"/component/mallEntry/mallEntry.55116.css"    
+    },
+    "cable":{
+         "js":"/component/cable/cable.42770.js",
+         "html":"http://gip.happyelements.com/gip-homepage/facebook/v5/cable.html"
+    }
+  };
+Gip_JS_Config.maintancePageUrl = "";
+Gip_JS_Config.rcip = "10.130.136.224";
+Gip_JS_Config.runtime = "";
+Gip_JS_Config.userPerformance = {"loadingTestInterval":"60","loadingTestSwf":"\/app\/common\/loading_test_en.54831.swf"};
+
+Gip_JS_Config.gameBlock = '%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%20%20%20%20%3Cconfig%3E%0A%20%20%20%20%20%20%20%20%3Cgame%3E%3CwebHost%3Ehttp%3A%2F%2Fw.titan.happyelements.com%2Fflash.do%3C%2FwebHost%3E%3CstaticHost%3Ehttp%3A%2F%2Fstatic01.titan.happyelements.com%2Ftitan%2F%3C%2FstaticHost%3E%3CsslHost%3Ehttps%3A%2F%2Fhec_game-i.akamaihd.net%2Ftitan%2Ftitan%2F%3C%2FsslHost%3E%3Clocale%3Ehttp%3A%2F%2Fstatic01.titan.happyelements.com%2Ftitan%2Fconfig%2FlocaleConfig.1865.xml%3C%2Flocale%3E%3Cconfig%3Ehttp%3A%2F%2Fstatic01.titan.happyelements.com%2Ftitan%2Fconfig%2Fapp.2871.xml%3C%2Fconfig%3E%3Citem%3Ehttp%3A%2F%2Fstatic01.titan.happyelements.com%2Ftitan%2Fconfig%2Fitem.3049.bin%3C%2Fitem%3E%3ClanguageMap%3Ezh_CN%2Czh_HK%2Czh_TW%3Azh_TW%7Cen_EN%2Cen_AU%2Cen_GB%2Cen_US%3Aen_US%7Cde_GE%2Cde_DE%3Ade_DE%7Cja_JP%2Cjp_JP%3Aja_JP%3C%2FlanguageMap%3E%3CdefaultLanguage%3Ezh_TW%3C%2FdefaultLanguage%3E%3Clog%3E0%3C%2Flog%3E%3C%2Fgame%3E%0A%20%20%20%20%20%20%20%20%20%20%0A%20%20%3CapiStatus%3E%0A%09%3CcanDrink%3Efalse%3C%2FcanDrink%3E%0A%09%3CcheckNGWord%3Efalse%3C%2FcheckNGWord%3E%0A%09%3CgetAllFriendInfoList%3Etrue%3C%2FgetAllFriendInfoList%3E%20%0A%09%3CgetAppFriendIdList%3Etrue%3C%2FgetAppFriendIdList%3E%20%0A%09%3CgetAppFriendInfoList%3Etrue%3C%2FgetAppFriendInfoList%3E%0A%09%3CgetAppId%3Etrue%3C%2FgetAppId%3E%20%0A%09%3CgetConfig%3Etrue%3C%2FgetConfig%3E%20%0A%09%3CgetFriendsNotInApp%3Etrue%3C%2FgetFriendsNotInApp%3E%0A%09%3CgetGameWidth%3Etrue%3C%2FgetGameWidth%3E%20%0A%09%3CgetGameHeight%3Etrue%3C%2FgetGameHeight%3E%0A%09%3CgetLanguage%3Etrue%3C%2FgetLanguage%3E%20%0A%09%3CgetPlatform%3Etrue%3C%2FgetPlatform%3E%0A%09%3CgetQueryString%3Etrue%3C%2FgetQueryString%3E%20%20%0A%09%3CgetSessionKey%3Etrue%3C%2FgetSessionKey%3E%20%0A%09%3CgetUserInfo%3Etrue%3C%2FgetUserInfo%3E%20%0A%09%3CgetUsersInfoByIds%3Etrue%3C%2FgetUsersInfoByIds%3E%20%0A%09%3CgetVersion%3Etrue%3C%2FgetVersion%3E%20%0A%09%3CisFan%3Etrue%3C%2FisFan%3E%20%0A%09%3CisNewAppUser%3Etrue%3C%2FisNewAppUser%3E%20%0A%09%3Cnotify%3Efalse%3C%2Fnotify%3E%20%0A%09%3CpostFeed%3Etrue%3C%2FpostFeed%3E%20%0A%09%3Cpromote%3Efalse%3C%2Fpromote%3E%20%0A%09%3Cpresent%3Etrue%3C%2Fpresent%3E%20%0A%09%3CreloadGame%3Etrue%3C%2FreloadGame%3E%0A%09%3CshowBecomeFan%3Etrue%3C%2FshowBecomeFan%3E%20%0A%09%3CshowInviteFriends%3Etrue%3C%2FshowInviteFriends%3E%20%0A%09%3CshowPayment%3Etrue%3C%2FshowPayment%3E%20%0A%09%3CuploadPhoto%3Efalse%3C%2FuploadPhoto%3E%20%0A%09%3CdataCount%3Etrue%3C%2FdataCount%3E%0A%09%3CaskPermissions%3Etrue%3C%2FaskPermissions%3E%20%0A%09%3CgetPermissionStatus%3Etrue%3C%2FgetPermissionStatus%3E%09%0A%20%20%20%20%20%20%20%20%3Cinvite%3Etrue%3C%2Finvite%3E%0A%20%20%3C%2FapiStatus%3E%0A%20%0A%20%20%20%20%20%3C%2Fconfig%3E';
+
+
+function getPara(url,name){
+	var str = '',_p = name + '=';
+	if(url.indexOf("&"+_p)>-1) str = url.split("&"+_p)[1].split("&")[0];
+	if(url.indexOf("?"+_p)>-1) str = url.split("?"+_p)[1].split("&")[0];
+	return str;
+}
+function dc36(){
+	var queryString = window.location.search;
+	var ref = getPara(queryString,"ref");
+	var src = getPara(queryString,"gip_ad_src");	
+	var	_uniq_key = Gip_JS_Config.dcUUID;
+	var	_user_id = 12345;
+	var	_ac_type = 36;
+	var	ut = new Date().getTime();
+	if(src || ref == "games_featured"){
+		src = src || ref;
+		var url = Gip_JS_Config.dataCountUrl;
+			url = [url,'?_uniq_key=',_uniq_key,'&_user_id=',_user_id,'&_ac_type=',_ac_type,'&ut=',ut,'&src=',src].join('');
+		var img = new Image();
+			img.src = url;
+	}
+}
+dc36();
+
+var Gip_JS_AppInfo = {"flashHeight":"700","flashWidth":"760","gameUrl":"http:\/\/static01.titan.happyelements.com\/titan\/Preloader.1314.swf","language":"zh_TW","languages":[],"needDiff":false,"newAppUser":false,"platform":"Facebook","prohibition":[],"snsId":"100003143554079","staticServer":"http:\/\/static.gip.happyelements.com","timeout":"30000","uid":"80000088315032","webServer":"http:\/\/gip.happyelements.com","installTime":"2011-11-01 11:27:51","sessionKey":"gip.234b4ce53b56f27ecfe672b33d3bf60f.36000.1331054624-80000088315032"} ;
+
+
+
+(function(){
+         var node = document.createElement("script");
+         node.src = 'http://static.gip.happyelements.com/fm/os.60502.js';  
+         document.getElementsByTagName('head')[0].appendChild(node); 
+})();
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<app appId="10001"> 
+      <p key="appName">Titan_zh</p>  
+      <p key="sns.appName"></p> 
+      <p key="sns.platform">Facebook</p>  
+      <p key="dcUUID">titan_fb_prod</p>  
+      <p key="dcUniqueKey">titan_fb_prod</p>  
+      <p key="sns.appKey">123</p>  
+      <p key="sns.appSecret">123</p>  
+      <p key="sns.appId">152645868106521</p>  
+      <p key="sns.appUrl">http://apps.facebook.com/mykingdomhe/</p>  
+      <p key="language">zh_TW</p>  
+      <p key="canvasHeight">1450</p>
+      <p key="invite_open">1</p>  
+      <p key="sns.playNowImage">http://static.gip.happyelements.com/css/facebook/0.0.6/pagetab/images/MyKingdom_zh_TW.png</p>  
+      <p key="sns.paymentUrl">http://payment.happyelements.com/loader/facebook_config.jsp</p>  
+      <p key="sns.paymentDisabled">false</p>  
+      <p key="sns.appPhoto">http://static.gip.happyelements.com/css/facebook/0.0.6/images/pre_75.jpg</p>  
+      <p key="game.batch.callback"><![CDATA[http://w.titan.happyelements.com/requestCenterBatch/?gip_type={type}&gip_method={method}]]></p>  
+      <p key="sns.appDescription"><![CDATA[ GemAlchemy  是一款好玩的游戏 ]]> </p>  
+      <p key="gameSwfUrl"><![CDATA[http://static01.titan.happyelements.com/titan/Preloader.1314.swf]]></p>  
+      <p key="pageConfigureData"><![CDATA[{"ad":true}]]></p>  
+      <!-- 请在下面加游戏相关信息 -->  
+      <p key="gameBlock"><![CDATA[<game><webHost>http://w.titan.happyelements.com/flash.do</webHost><staticHost>http://static01.titan.happyelements.com/titan/</staticHost><sslHost>https://hec_game-i.akamaihd.net/titan/titan/</sslHost><locale>http://static01.titan.happyelements.com/titan/config/localeConfig.1857.xml</locale><config>http://static01.titan.happyelements.com/titan/config/app.2871.xml</config><item>http://static01.titan.happyelements.com/titan/config/item.3046.bin</item><languageMap>zh_CN,zh_HK,zh_TW:zh_TW|en_EN,en_AU,en_GB,en_US:en_US|de_GE,de_DE:de_DE|ja_JP,jp_JP:ja_JP</languageMap><defaultLanguage>zh_TW</defaultLanguage><log>0</log></game>]]></p>  
+      <p key="gip.crossPromotionBar"><![CDATA[{"logo":"http://static.gip.happyelements.com/app/common/cross_promotion/v2/mykingdom/top.jpg","logoLink":"http://www.facebook.com/apps/application.php?id=152645868106521","promotionApps":["8001600128","8000100301","8001700128"]}]]></p>  
+      <p key="messageCenter.open"><![CDATA[1]]></p>  
+      <p key="messageCenter.image"><![CDATA[http://static.gip.happyelements.com/portal/framework/8000100301/bfd7963bf716f3263546a9115a32d46e.jpg]]></p>  
+      <p key="advanced_invite_logo"><![CDATA[http://static.gipportal.happyelements.com/portal/invite/titan.png]]></p>  
+      <p key="advanced_invite_custom"><![CDATA[{"8000100101":{"name":"GA"}}]]></p>  
+      <p key="flashWidth"><![CDATA[760]]></p> 
+</app>
+<platform name="default"> 
+      <!-- 平台请求超时时间-->  
+      <p key="platformHttpTimeout">2000</p>  
+      <!-- 是否加载进度条-->  
+      <p key="needProgressBar">false</p>  
+      <!-- 静态服务器地址-->  
+      <p key="staticServer">http://www.xiabankan.com</p>  
+      <!-- 动态服务器地址-->  
+      <p key="webServer">http://www.xiabankan.com</p>  
+      <!-- 静态SSL服务器地址-->  
+      <p key="staticSSLServer">http://www.xiabankan.com</p>  
+      <!-- 动态SSL服务器地址-->  
+      <p key="webSSLServer">http://www.xiabankan.com</p>  
+      <p key="snsJSFile">/js/tencent.001.js</p>  
+      <p key="snsCSSFile">/css/tencent.001.css</p>  
+      <!-- 当前平台默认超时毫秒时间-->  
+      <p key="timeout">30000</p>  
+      <!-- 前端是否可以更新-->  
+      <p key="needDiff">false</p>  
+      <!-- 前端向DC打点的URL-->  
+      <p key="dataCountUrl">http://log.dc.happyelements.net/restapi.php</p>  
+      <p key="dataCountSSLUrl">http://log.dc.happyelements.net/restapi.php</p>  
+      <!-- loading test-->  
+      <p key="loadingTestInterval">60</p>  
+      <p key="loadingTestSwf"><![CDATA[/app/common/loading_test_en.54831.swf]]></p>  
+      <!-- 前端APP支持情况 -->  
+      <p key="apiStatus"> <![CDATA[ 
+		  <apiStatus>
+		    <getAllFriendInfoList>true</getAllFriendInfoList>
+		    <getAppFriendInfoList>true</getAppFriendInfoList>
+		    <getAppId>true</getAppId>
+		    <getConfig>true</getConfig>
+		    <getGameWidth>true</getGameWidth>
+		    <getGameHeight>true</getGameHeight>
+		    <getLanguage>true</getLanguage>
+		    <getPlatform>true</getPlatform>
+		    <getSessionKey>true</getSessionKey>
+		    <getUserInfo>true</getUserInfo>
+		    <isFan>false</isFan>
+		    <isNewAppUser>true</isNewAppUser>
+		    <notify>true</notify>
+		    <postFeed>true</postFeed>
+		    <promote>true</promote>
+		    <present>true</present>
+		    <reloadGame>true</reloadGame>
+		    <showInviteFriends>true</showInviteFriends>
+		    <showPayment>true</showPayment>
+		    <uploadPhoto>false</uploadPhoto>
+		     <dataCount>true</dataCount>		
+		    <invite>true</invite>
+		  </apiStatus>
+        ]]> </p> 
+</platform> 
+</root>

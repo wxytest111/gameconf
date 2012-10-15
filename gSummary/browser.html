@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>浏览器请求比例</title>
+<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+<link rel="stylesheet" href="../css/freechart.css" type="text/css" />
+<style type="text/css"> 
+*{margin:0;padding:0;list-style:none;font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:20px;}
+table {border-collapse:collapse;border-top:3px solid #ccc;width:100%;clear:both;}
+th,td {border-bottom:1px solid #ccc;padding:6px 10px 6px 5px;text-align:left; white-space:nowrap;color:#666;}
+th {width:100px; white-space:nowrap;}
+tr:hover { background:#f5f5f5;}
+tr:hover a,tr:hover td,tr:hover th {color:#000;}
+tr.testing {background:#ddd;}
+thead td { background:#f5f5f5; font-weight:700;}
+a:hover { text-decoration:underline;color:#0F0}
+em {color:#cd0000;}
+h1 { font-size:14px; line-height:30px; padding-bottom:10px;float:left;}
+.note ol,.close {display:none;}
+.note h2 {float:right;}
+.note_hover {position:relative;}
+.note_hover ol {display:block;position:absolute;right:0;top:18px;border:1px solid #ccc;padding:10px;background:#f5f5f5;width:300px;}
+.note_hover .close {font-family:verdana;font-size:12px;display:block;position:absolute;right:8px;top:25px;z-index:7;}
+.proxy {float:right;text-align:right;padding:0 10px 10px 0;}
+.content{width:960px;color:black;}
+.content .rows div{float:left;}
+.title {width:960px;font-size:18px;line-height:28px;text-align:center;}
+.condition{width:960px;}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+	<div  class="head">
+		<div class="head_inner">
+			<div class="logo"><a href="#"><img src="../../images/logo.jpg" alt="logo"/></a></div>
+			<div class="nav" id="tab_nav">
+				<a href="/tv_disp/freechart/index.html">首页</a>
+				<a  target="_blank" href="http://developers.happyelements.com/docs">文档库</a>
+				<a href="/portal" target="_blank">GIP问答</a>
+			</div>
+		</div>
+	</div>
+	
+	<div  class="content" id="content">
+		<div class="title">浏览器访问信息</div>
+		<div class="condition">
+			增加某日浏览器信息到下表.请选择日期<input type="text" id="dateChoice" />&nbsp;&nbsp;<input type="button" value="确定" id="addInfo"/>
+		</div>
+		
+	</div>
+	<div  class="foot">Copyright (c)  2012 Happyelements</div>
+	</div>
+</body>
+<script type="text/javascript" src="../js/FusionCharts.js"></script>
+<script type="text/javascript" src="../js/calender.js"></script>
+<script type="text/javascript" src="../../js/lib_0_2.js"></script>
+<script type="text/javascript">
+var trace=HE.trace;
+var canl=HE.$('#dateChoice');
+canl.onclick=function(){
+	MyCalendar.SetDate(this);
+};
+var btn=HE.$('#addInfo');
+var content=HE.$('#content');
+HE.addEvent(btn,'click',function(){
+	if(canl.value==""){
+		alert('请选择日期');
+		return;
+	}
+	var date=canl.value.replace(/\-/g,"");
+	HE.ajax({
+		url:"/tv_disp/freechart/api/gSummaryBrowser.php",
+		data:{
+			"period":"minutely",
+			"date":date
+		}
+	},function(d){
+		ToRenderChart(d,date);
+	});
+});
+//load default data
+HE.ajax({
+	url:"/tv_disp/freechart/api/gSummaryBrowser.php",
+	data:{
+		"period":"minutely"
+	}
+},function(d){
+	ToRenderChart(d);
+});
+
+//生成该页面的图形的整体代码块
+function ToRenderChart(d,date){
+	date=date||(new Date().getFullYear()+''+((new Date().getMonth()+1)>10?(new Date().getMonth()+1):'0'+(new Date().getMonth()+1))+''+new Date().getDate());
+	if(d.ret=='success'){
+		//var last=d.data.last;
+		var sum=d.data.sum;
+		var div=document.createElement('div');
+		div.className="rows";
+		var id=new Date().getTime();
+		div.innerHTML='<div id="mp_'+id+'">FusionCharts will load here</div><div id="mc_'+id+'">Columns will load here</div>';
+		content.appendChild(div);
+		renderPie(sum,"mp_"+id);
+		//renderPie(sum,"myChart2");
+		renderColumn(sum,"mc_"+id);
+		//renderColumn(sum,"myChartCol2");
+	}else{
+		alert("error,reason:"+d.data);
+	}
+}
+/**
+ * 生成饼状图形
+ */
+function renderPie(data,container){
+	var myChart=new FusionCharts("../swf/Pie3D.swf",'f'+new Date().getTime(),"420","300","0","1");
+	var str='<chart caption="访问次数'+data.id+'" showLegend="1" legendPosition="RIGHT" showLabels="0"  numberPrefix="%">';
+	var len=data.data.length;
+	for(var i=0;i<len;i++){
+		var d=data.data[i];
+		if(d.ratio>0){
+			str+='<set label="'+d["browser"]+'" value="'+d["ratio"]+'" />';
+		}
+	}
+	str+='</chart>';
+	myChart.setXMLData(str);
+	myChart.render(container);
+}
+/**
+ * 生成柱状图
+ */
+function renderColumn(data,container){
+	var d=new Array();
+	var strXML;
+	strXML = "<chart caption='"+data.id+"' formatNumberScale='0' numberPrefix='us' animation='1' showValues='1' rotateValues='1' placeValuesInside='1'>";
+	strXML = strXML + "<categories><category name='"+'平均响应时间(us)'+"' /></categories>";
+	var len=data.data.length;
+	for(var i=0;i<len;i++){
+		var d=data.data[i];
+		if(d.ratio>0){
+			strXML+="<dataset seriesName='"+d['browser']+"' ><set value='"+d['resptime']+"' /></dataset>";
+		}
+		//d[i]=new array(data.data[i]['browser'],data.data[i]['resptime']);
+	}
+	strXML = strXML + "</chart>";
+	var chart = new FusionCharts("../swf/MSColumn3D.swf", 'f'+new Date().getTime(), "500", "330", "0", "1");
+	chart.setXMLData(strXML);
+	chart.render(container);
+}
+
+
+
+</script>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SNS平台异常条数</title>
+<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+<link rel="stylesheet" href="../css/freechart.css" type="text/css" />
+<style type="text/css"> 
+*{margin:0;padding:0;list-style:none;font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:20px;}
+table {border-collapse:collapse;border-top:3px solid #ccc;width:100%;clear:both;}
+th,td {border-bottom:1px solid #ccc;padding:6px 10px 6px 5px;text-align:left; white-space:nowrap;color:#666;}
+th {width:100px; white-space:nowrap;}
+tr:hover { background:#f5f5f5;}
+tr:hover a,tr:hover td,tr:hover th {color:#000;}
+tr.testing {background:#ddd;}
+thead td { background:#f5f5f5; font-weight:700;}
+a:hover { text-decoration:underline;color:#0F0}
+em {color:#cd0000;}
+h1 { font-size:14px; line-height:30px; padding-bottom:10px;float:left;}
+.note ol,.close {display:none;}
+.note h2 {float:right;}
+.note_hover {position:relative;}
+.note_hover ol {display:block;position:absolute;right:0;top:18px;border:1px solid #ccc;padding:10px;background:#f5f5f5;width:300px;}
+.note_hover .close {font-family:verdana;font-size:12px;display:block;position:absolute;right:8px;top:25px;z-index:7;}
+.proxy {float:right;text-align:right;padding:0 10px 10px 0;}
+.content{width:960px;color:black;}
+.content .rows div{float:left;}
+.title {width:960px;font-size:18px;line-height:28px;text-align:center;}
+.condition{width:960px;}
+.borders{border:1px solid black;}
+.hide{display:none;}
+</style>
+<script type="text/javascript" src="../js/calender.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div  class="head">
+		<div class="head_inner">
+			<div class="logo"><a href="#"><img src="../../images/logo.jpg" alt="logo"/></a></div>
+			<div class="nav" id="tab_nav">
+				<a href="/tv_disp/freechart/index.html">首页</a>
+				<a  target="_blank" href="http://developers.happyelements.com/docs">文档库</a>
+				<a href="/portal" target="_blank">GIP问答</a>
+			</div>
+		</div>
+	</div>
+	
+	<div  class="content" id="content">
+		<div class="title">SNS平台异常条数</div>
+		<div class="condition">
+			查看某日调用情况信息到下表.请选择日期<input class="borders" type="text" id="dateChoice" onclick="MyCalendar.SetDate(this);"/>&nbsp;&nbsp;<input type="button" value="确定" id="addInfo"/>
+		</div>
+		<div class="rows hide" id="linediv">
+			<div class="condition">选择需要对比的两天(不选则默认今天)：第一天<input class="borders" type="text" id="dateChoice1" onclick="MyCalendar.SetDate(this);"/>&nbsp;&nbsp;第二天<input class="borders" type="text" id="dateChoice2" onclick="MyCalendar.SetDate(this);"/>&nbsp;&nbsp;<input type="button" value="确定" id="compareInfo"/></div>
+			<div class="condition" id="optionCheck"></div>
+			<div id="mzl_1"></div>
+		</div>
+		<div class="rows hide" id="piediv">
+			<div id="mp_1"></div>
+			<div id="mc_1"></div>
+		</div>
+	</div>
+	<div  class="foot">Copyright (c)  2012 Happyelements</div>
+	</div>
+	<input type="hidden" value="/tv_disp/freechart/api/gSummaryException.php" id="fetchUrl" />
+</body>
+<script type="text/javascript" src="../js/FusionCharts.js"></script>
+<script type="text/javascript" src="../../js/lib_0_2.js"></script>
+<script type="text/javascript" src="../js/os.js"></script>
+<script type="text/javascript">
+var trace=HE.trace;
+new PM.MonitorClass({type:'exception',title:'SNS平台异常条数',url:HE.$('#fetchUrl').value});
+</script>
+</html>
